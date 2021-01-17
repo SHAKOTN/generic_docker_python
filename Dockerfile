@@ -18,11 +18,8 @@ ADD main.py /app/main.py
 WORKDIR /app
 
 FROM base as local
-CMD ["/app/main.py"]
-ENTRYPOINT ["python"]
 
 FROM base as test-base
 
 FROM base as production
 ENTRYPOINT ["/usr/local/bin/dumb-init", "--"]
-CMD ["python", "/app/main.py"]

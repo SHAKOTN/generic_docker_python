@@ -6,3 +6,5 @@ services:
       context: .
       target: production
       dockerfile: Dockerfile
+
+    command: ["python", "main.py"]
